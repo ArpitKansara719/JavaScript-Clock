@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: black;
+            color: greenyellow;
+            font-size: 150px;
+        }
+        .main
+        {
+            position: absolute;
+            transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <span id="hrs">00</span>
+        <span>:</span>
+        <span id="min">00</span>
+        <span>:</span>
+        <span id="sec">00</span>
+    </div>
+
+    <script>
+
+            let hours = document.getElementById('hrs');
+            let minutes = document.getElementById('min');
+            let seconds = document.getElementById('sec');
+
+            
+            
+            
+            setInterval(() => {
+            let currentTime = new Date();
+            hours.innerHTML = (currentTime.getHours()<10?"0":"")+ currentTime.getHours();
+            minutes.innerHTML =(currentTime.getMinutes()<10?"0":"")+ currentTime.getMinutes();
+            seconds.innerHTML =(currentTime.getSeconds()<10?"0":"")+ currentTime.getSeconds();
+            }, 1000);
+            
+
+          
+            
+
+        
+
+
+    </script>
+
+
+
+</body>
+</html>
